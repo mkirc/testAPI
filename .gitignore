@@ -433,14 +433,14 @@ $RECYCLE.BIN/
 !.vscode/extensions.json
 
 # ignore appsettings
-**/appsettings.development.json
-**/appsettings.staging.json
-**/appsettings.production.json
+**/appsettings.Development.json
+**/appsettings.Staging.json
+**/appsettings.Production.json
 
 # ignore connectionstrings
-**/connectionstrings.development.json
-**/connectionstrings.staging.json
-**/connectionstrings.production.json
+**/connectionstrings.Development.json
+**/connectionstrings.Staging.json
+**/connectionstrings.Production.json
 
 # ignore mailsettings
 **/mailsettings.Development.json
