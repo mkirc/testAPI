@@ -6,7 +6,7 @@ using System.Collections.Generic;
 
 namespace testAPI.Controllers
 {
-    [Route("api/[controller]")]
+    [Route("api/tao")]
     [ApiController]
     public class QuotesController : ControllerBase
     {
