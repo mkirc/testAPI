@@ -1,5 +1,5 @@
 FROM mcr.microsoft.com/dotnet/core/sdk:3.1 as build-image
-COPY bin/Debug/netcoreapp3.1/publish/ testAPI/
+COPY ./bin/Debug/netcoreapp3.1/publish/ testAPI/
 WORKDIR /testAPI
 
 FROM mcr.microsoft.com/dotnet/core/aspnet:3.1
