@@ -45,7 +45,6 @@ namespace testAPI
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
-                app.UserL
             }
 
             app.UseHttpsRedirection();
