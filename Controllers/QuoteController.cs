@@ -2,6 +2,7 @@ using testAPI.Models;
 using testAPI.Services;
 using Microsoft.AspNetCore.Mvc;
 using System.Collections.Generic;
+using Microsoft.Extensions.Logging;
 
 
 namespace testAPI.Controllers
@@ -11,14 +12,19 @@ namespace testAPI.Controllers
     public class QuotesController : ControllerBase
     {
         private readonly QuoteService _quoteService;
+        private readonly ILogger _logger;
 
-        public QuotesController(QuoteService quoteService)
+        public QuotesController(QuoteService quoteService, ILogger<QuotesController> logger)
         {
             _quoteService = quoteService;
+            _logger = logger;
         }
         [HttpGet]
-        public ActionResult<List<Quote>> Get() =>
-            _quoteService.Get();
+        public ActionResult<List<Quote>> Get()
+        {
+            _logger.LogInformation("I have been logged");
+            return _quoteService.Get();
+        }
 
         [HttpGet("{id:length(24)}", Name = "getQuote")]
         public ActionResult<Quote> Get(string id)
