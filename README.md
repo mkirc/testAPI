@@ -10,4 +10,4 @@ copy to */testAPI
 
 #RUN
 
-`docker run --rm -it -p 8080:5000 testapi-image:latest`
+`docker run --rm --network="host" testapi-image:latest`
